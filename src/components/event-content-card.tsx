@@ -11,16 +11,16 @@ interface EventContentCardProps {
   title: string;
   des: string;
   name: string;
-  position: string;
   panel: string;
+  youtube: string;
   img: string;
 }
 export function EventContentCard({
   title,
   des,
   name,
-  position,
   panel,
+  youtube,
   img,
 }: EventContentCardProps) {
   return (
@@ -53,19 +53,21 @@ export function EventContentCard({
           {des}
         </Typography>
         <div className="flex items-center gap-4">
-          <Avatar
-            variant="circular"
-            src="/logos/spotify-logo.png"
-            alt="spotify"
-            size="lg"
-          />
+          <a href={youtube} target="_blank">
+            <Avatar
+              variant="circular"
+              src="/logos/youtube-logo.png"
+              alt="spotify"
+              size="lg"
+              />
+          </a>
           <div>
             <Typography variant="h6" color="blue-gray" className="mb-0.5">
               {name}
             </Typography>
-            <Typography variant="small" className="font-normal !text-gray-500">
+            {/* <Typography variant="small" className="font-normal !text-gray-500">
               {position}
-            </Typography>
+            </Typography> */}
           </div>
         </div>
       </CardBody>

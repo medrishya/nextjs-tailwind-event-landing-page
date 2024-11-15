@@ -41,9 +41,9 @@ export function Faq() {
             variant="lead"
             className="mx-auto mb-24 lg:w-3/5 !text-gray-500"
           >
-            Welcome to the AI Conference 2023 FAQ section. We&apos;re here to
+            Welcome to the Halla Events FAQ section. We&apos;re here to
             address your most common queries and provide you with the
-            information you need to make the most of your conference experience.
+            information you need to make the most of your event experience.
           </Typography>
         </div>
 

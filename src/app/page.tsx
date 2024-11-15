@@ -9,6 +9,8 @@ import OurStats from "./our-stats";
 import EventContent from "./event-content";
 import Faq from "./faq";
 
+export const dynamic = 'force-dynamic'
+
 export default function Portfolio() {
   return (
     <>

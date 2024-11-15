@@ -8,13 +8,21 @@ import {
 interface AboutCardProp {
   title: string;
   subTitle: string;
+  image: string;
   description: string;
 }
 
-export function AboutCard({ title, description, subTitle }: AboutCardProp) {
+export function AboutCard({ title, description, image, subTitle }: AboutCardProp) {
   return (
-    <Card shadow={false}>
-      <CardBody className="h-[453px] p-5 flex flex-col justify-center items-center rounded-2xl bg-gray-900 ">
+    <Card
+    shadow={false} >
+      <CardBody       style={{
+        background: "url('"+image+"')",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat"
+      }} 
+      className="h-[453px] p-5 flex flex-col justify-center items-center rounded-2xl bg-gray-900 ">
         <Typography variant="h6" className="mb-4 text-center" color="white">
           {subTitle}
         </Typography>
@@ -27,9 +35,9 @@ export function AboutCard({ title, description, subTitle }: AboutCardProp) {
         >
           {description}
         </Typography>
-        <Button color="white" size="sm">
+        {/* <Button color="white" size="sm">
           view details
-        </Button>
+        </Button> */}
       </CardBody>
     </Card>
   );
